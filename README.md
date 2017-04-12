@@ -1,6 +1,9 @@
 ### Name and ID
 Zhening Li 445612
 
+### Project Description
+Basically, I want to create a website similar to Google Photos. Users can create albums and upload their photos into their albums.
+
 
 ### Creative Project Rubric
 - Submite the rubric on time (5 Points)  
