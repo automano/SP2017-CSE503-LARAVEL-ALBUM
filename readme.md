@@ -1,8 +1,9 @@
 ### Name and ID
 Zhening Li 445612
 
+
 ### Project Description
-Basically, I want to create a website similar to Google Photos. Users can create albums and upload their photos into their albums.
+Basically, I want to implement a website similar to Google Photos. Users can login, logout and register. After they login, user can create albums and upload their photos into their albums.
 
 
 ### Creative Project Rubric
@@ -50,3 +51,5 @@ Basically, I want to create a website similar to Google Photos. Users can create
     - User can comment photos (5 points)
     - Add cover for each album (5 points)
     - Use masonry to do  photos layout (Waterfall flow arrangement)
+
+    
