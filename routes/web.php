@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Albums resource route
+Route::resource('albums','AlbumsController');
+
+// Photos resource route
+Route::resource('photos','PhotosController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
