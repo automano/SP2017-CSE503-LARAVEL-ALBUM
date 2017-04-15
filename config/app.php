@@ -177,6 +177,12 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Image Verification Code Provider...
+         */
+         // Captcha
+         Mews\Captcha\CaptchaServiceProvider::class,
+
     ],
 
     /*

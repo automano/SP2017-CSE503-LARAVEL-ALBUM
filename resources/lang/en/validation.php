@@ -86,6 +86,8 @@ return [
     'uploaded'             => 'The :attribute failed to upload.',
     'url'                  => 'The :attribute format is invalid.',
 
+    'captcha'              => 'The captcha is not correct.',
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
