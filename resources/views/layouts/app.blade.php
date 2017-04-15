@@ -78,7 +78,14 @@
             </div>
         </nav>
 
-        @yield('content')
+        <!-- bootstrap container -->
+        <div class="container">
+            <!-- show info message -->
+            @include('shared.messages')
+            <!-- show main content -->
+            @yield('content')
+        </div>
+
     </div>
 
     <!-- Scripts -->

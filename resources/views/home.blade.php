@@ -1,17 +1,23 @@
 @extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+@section('title', 'Home')
 
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
+@section('content')
+
+<!-- Error Message -->
+@include('shared.errors')
+
+<!-- create album: dialog button -->
+<button type="button" class="btn btn-primary" style="margin-bottom:10px">Create album</button>
+
+<!-- show albums -->
+<div class="row">
+    @include('shared.album')
+    @include('shared.album')
+    @include('shared.album')
+    @include('shared.album')
+    @include('shared.album')
+    @include('shared.album')
 </div>
+
 @endsection
