@@ -49,12 +49,9 @@
 
 <!-- show albums -->
 <div class="row">
-    @include('shared.album')
-    @include('shared.album')
-    @include('shared.album')
-    @include('shared.album')
-    @include('shared.album')
-    @include('shared.album')
+<div class="row">
+    @each('shared.album', $albums,'album')
+</div>
 </div>
 
 @endsection
