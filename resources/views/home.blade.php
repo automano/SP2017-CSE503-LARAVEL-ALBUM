@@ -49,9 +49,12 @@
 
 <!-- show albums -->
 <div class="row">
-<div class="row">
-    @each('shared.album', $albums,'album')
-</div>
+    @foreach ($albums as $album)
+    <!-- only show current user's album-->
+        @if($album->user_id == Auth::user()->id)
+            @include('shared.album', $album)
+        @endif
+    @endforeach
 </div>
 
 @endsection
