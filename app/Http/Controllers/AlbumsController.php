@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
+use App\Album;
+
 class AlbumsController extends Controller
 {
     /**
@@ -34,7 +39,23 @@ class AlbumsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Data validator
+        $this->validate($request, [
+            'name' => 'required|max:50',
+        ]);
+
+        // Data store
+        $album = Album::create([
+            'user_id'=>$request->user_id,
+            'name' => $request->name,
+            'intro' => $request->intro,
+            'password' => $request->password,
+        ]);
+
+        // go back
+        session()->flash('success', 'Album created successfully');
+        return back();
+
     }
 
     /**
