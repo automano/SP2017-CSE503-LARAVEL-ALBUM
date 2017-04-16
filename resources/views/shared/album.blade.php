@@ -3,13 +3,13 @@
         <div class="panel panel-default">
           <div class="panel-body">
             @if( $album->cover == '' )
-                <img class="img-responsive" src="/img/album/covers/default.jpg">
+                <img class="img-responsive" src="/img/album/covers/default.png">
             @else
                 <img class="img-responsive" src="{{ $album->cover }}">
             @endif
             <p class="album-name">{{ $album->name }}</p>
             @if( $album->intro == '' )
-                <p class="album-intro">no introduction..</p>
+                <p class="album-intro">no introduction</p>
             @else
                 <p class="album-intro">{{ $album->intro }}</p>
             @endif
