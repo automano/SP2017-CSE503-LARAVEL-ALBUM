@@ -124,6 +124,12 @@ class AlbumsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // delete
+        $album = Album::findOrFail($id);
+        $album->delete();
+
+        // return
+        session()->flash('success','Delete Album Successfully');
+        return redirect()->route('home');
     }
 }

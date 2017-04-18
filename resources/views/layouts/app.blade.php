@@ -35,8 +35,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel Album') }}
+                    <a class="navbar-brand" href="{{ url('/home') }}">
+                        {{ config('','Laravel Album Home') }}
                     </a>
                 </div>
 
