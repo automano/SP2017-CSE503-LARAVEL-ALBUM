@@ -66,7 +66,14 @@ class AlbumsController extends Controller
      */
     public function show($id)
     {
-        //
+        // get data of album
+        $album = Album::findOrFail($id);
+
+        // get data of photos
+        //...
+
+        // return
+        return view('albums.show', compact('album'));
     }
 
     /**
@@ -89,7 +96,24 @@ class AlbumsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // data validation
+        $this->validate($request, [
+            'name' => 'required|max:50',
+        ]);
+
+        // update new data
+        $album = Album::findOrFail($id);
+        $album->update([
+            'name' => $request->name,
+            'intro' => $request->intro,
+        ]);
+
+        // upload cover
+        //...
+
+        // return 
+        session()->flash('success', 'Edit album successfully');
+        return back();
     }
 
     /**
