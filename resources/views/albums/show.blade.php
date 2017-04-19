@@ -18,7 +18,7 @@
         <p>{{ $album->intro }}</p>
 
         <!-- upload photo -->
-        <button type="button" class="btn btn-primary">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadPhoto">
           Upload Photo
         </button>
         <!-- edit album -->
@@ -32,6 +32,33 @@
     </div>
 </div>
 
+<!-- upload photo: dialog -->
+<div class="modal fade" id="uploadPhoto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Upload Photo</h4>
+      </div>
+      <div class="modal-body">
+          <form action="{{ route('photos.store') }}" method="post" enctype="multipart/form-data">
+            {{ csrf_field() }}
+            <input type="hidden" name="album_id" value="{{ $album->id }}">
+            <div class="form-group">
+              <input type="file" name="photo" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="name" placeholder="Add a title for this photo">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="intro" placeholder="Add an introduction for this photo">
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- edit album: dialog -->
 <div class="modal fade" id="editAlbum" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
