@@ -109,7 +109,15 @@ class AlbumsController extends Controller
         ]);
 
         // upload cover
-        //...
+        if($request->hasFile('cover')){
+            // zip cover and 
+            $cover_path = "img/album/covers/" . time() . ".jpg";
+            Image::make($request->cover)->resize(355, 200)->save(public_path($cover_path));
+            // update album cover
+            $album->update([
+                'cover' => "/" . $cover_path,
+            ]);
+        }
 
         // return 
         session()->flash('success', 'Edit album successfully');

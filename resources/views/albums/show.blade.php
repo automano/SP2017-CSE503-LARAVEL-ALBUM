@@ -46,19 +46,25 @@
             {{ csrf_field() }}
             {{ method_field('PUT') }}
             <div class="form-group">
-              <label for="name" class="col-sm-2 control-label">Album name</label>
+              <label for="name" class="col-sm-2 control-label">Name</label>
               <div class="col-sm-10">
                 <input type="text" class="form-control" id="name" name="name" required value="{{ $album->name }}">
               </div>
             </div>
             <div class="form-group">
-              <label for="intro" class="col-sm-2 control-label">Album description</label>
+              <label for="intro" class="col-sm-2 control-label">Description</label>
               <div class="col-sm-10">
                 <input type="text" class="form-control" id="intro" name="intro" value="{{ $album->intro }}">
               </div>
             </div>
 
             <!-- upload album cover -->
+            <div class="form-group">
+                <label for="intro" class="col-sm-2 control-label">Cover</label>
+                <div class="col-sm-10">
+                  <input type="file" name="cover">
+                </div>
+            </div>
 
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">

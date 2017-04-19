@@ -24,13 +24,13 @@
             <div class="form-group">
             <!-- pass current user id to create album form -->
               <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-              <label for="name" class="col-sm-2 control-label">Album name</label>
+              <label for="name" class="col-sm-2 control-label">Name</label>
               <div class="col-sm-10">
                 <input type="text" class="form-control" id="name" name="name" required>
               </div>
             </div>
             <div class="form-group">
-              <label for="intro" class="col-sm-2 control-label">Album description</label>
+              <label for="intro" class="col-sm-2 control-label">Description</label>
               <div class="col-sm-10">
                 <input type="text" class="form-control" id="intro" name="intro">
               </div>
