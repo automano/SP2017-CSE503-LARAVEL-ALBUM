@@ -102,7 +102,16 @@ class PhotosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // update
+        $photo = Photo::findOrFail($id);
+        $photo->update([
+            'name' => $request->name,
+            'intro' => $request->intro,
+        ]);
+
+        // return
+        session()->flash('success', 'Edit Successful');
+        return back();
     }
 
     /**
@@ -113,6 +122,12 @@ class PhotosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // delete
+        $photo = Photo::findOrFail($id);
+        $photo->delete();
+
+        // return 
+        session()->flash('success', 'Delete Successful');
+        return back();
     }
 }
