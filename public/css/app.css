@@ -7692,4 +7692,41 @@ button.close {
   text-overflow: ellipsis;
 }
 
+.photo .panel-body {
+  position: relative;
+  padding: 0px;
+}
+
+.photo .photo-name {
+  color: black;
+  font-size: 16px;
+  margin-top: 5px;
+  padding-left: 5px;
+}
+
+.photo .photo-intro {
+  color: gray;
+  font-size: 12px;
+  padding-left: 5px;
+}
+
+.photo .photo-conf {
+  z-index: -1;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  top: auto;
+  color: gray;
+  font-size: 22px;
+  padding: 2px;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #D6D6D6;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+}
+
+.photo:hover .photo-conf {
+  z-index: 0;
+}
+
 /*# sourceMappingURL=app.css.map */

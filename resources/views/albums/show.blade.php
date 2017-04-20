@@ -126,6 +126,9 @@
 
 
 <!-- show photos -->
-
+<hr>
+<div class="row">
+    @include('shared.photo')
+</div>
 
 @endsection
