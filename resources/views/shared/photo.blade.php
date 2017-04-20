@@ -1,4 +1,4 @@
-<div class="col-md-3 col-sm-4 photo">
+<div class="col-md-3 col-sm-4 photo item">
     <div class="panel panel-default">
       <div class="panel-body">
         <img class="img-responsive" src="{{ $photo->src }}">
