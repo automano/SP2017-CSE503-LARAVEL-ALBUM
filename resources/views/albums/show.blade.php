@@ -43,6 +43,7 @@
       <div class="modal-body">
           <form action="{{ route('photos.store') }}" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
+            <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
             <input type="hidden" name="album_id" value="{{ $album->id }}">
             <div class="form-group">
               <input type="file" name="photo" required>
@@ -127,8 +128,23 @@
 
 <!-- show photos -->
 <hr>
-<div class="row">
-    @include('shared.photo')
+<div class="row masonry">
+    @each('shared.photo', $photos, 'photo')
 </div>
 
+{!! $photos->render() !!}
+
+@endsection
+
+@section('script')
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+<!-- Waterfalls flow-->
+<script>
+$('.masonry').imagesLoaded(function() {
+    $('.masonry').masonry({
+    itemSelector: '.item'
+    });
+});
+</script>
 @endsection

@@ -59,6 +59,7 @@ class PhotosController extends Controller
 
         // store
         $photo = Photo::create([
+            'user_id'=>$request->user_id,
             'album_id' => $request->album_id,
             'name' => $name,
             'intro' => $request->intro,
