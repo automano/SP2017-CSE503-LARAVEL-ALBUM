@@ -8,9 +8,9 @@
 <div class="row">
     <div class="col-sm-3">
         @if( $album->cover == '' )
-            <img class="img-responsive" src="/img/album/covers/default.png">
+            <img class="img-responsive" alt="default_album_cover" src="/img/album/covers/default.png">
         @else
-            <img class="img-responsive" src="{{ $album->cover }}">
+            <img class="img-responsive" alt="album_cover" src="{{ $album->cover }}">
         @endif
     </div>
     <div class="col-sm-9">
@@ -33,12 +33,12 @@
 </div>
 
 <!-- upload photo: dialog -->
-<div class="modal fade" id="uploadPhoto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="uploadPhoto" tabindex="-1" role="dialog" aria-labelledby="myUploadModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Upload Photo</h4>
+        <h4 class="modal-title" id="myUploadModalLabel">Upload Photo</h4>
       </div>
       <div class="modal-body">
           <form action="{{ route('photos.store') }}" method="post" enctype="multipart/form-data">
@@ -62,12 +62,12 @@
 </div>
 
 <!-- edit album: dialog -->
-<div class="modal fade" id="editAlbum" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="editAlbum" tabindex="-1" role="dialog" aria-labelledby="myEditModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Edit Album</h4>
+        <h4 class="modal-title" id="myEditModalLabel">Edit Album</h4>
       </div>
       <div class="modal-body">
           <form class="form-horizontal" action="{{ route('albums.update', $album->id) }}" method="post"  enctype="multipart/form-data">
@@ -106,12 +106,12 @@
 </div>
 
 <!-- delete album: dialog -->
-<div class="modal fade" id="deleteAlbum" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="deleteAlbum" tabindex="-1" role="dialog" aria-labelledby="myDeleteModalLabel">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content" style="text-align:center">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Are you sure to delete this album?</h4>
+        <h4 class="modal-title" id="myDeleteModalLabel">Are you sure to delete this album?</h4>
       </div>
       <div class="modal-body">
           <form action="{{ route('albums.destroy', $album->id) }}" method="post" style="display: inline-block;">
@@ -138,7 +138,8 @@
 
 @section('script')
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<!-- Waterfalls flow-->
+<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+<!-- waterfalls flow -->
 <script>
 $('.masonry').imagesLoaded(function() {
     $('.masonry').masonry({

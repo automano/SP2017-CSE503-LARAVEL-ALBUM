@@ -43,7 +43,7 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -83,12 +83,14 @@
             <!-- show info message -->
             @include('shared.messages')
             <!-- show main content -->
-            @yield('content')
+            
+            @yield('content')         
         </div>
 
     </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    @yield('script')
 </body>
 </html>

@@ -11,12 +11,12 @@
 <button type="button" class="btn btn-primary" style="margin-bottom:10px" data-toggle="modal" data-target="#createAlbum">Create Album</button>
 
 <!-- create album: dialog -->
-<div class="modal fade" id="createAlbum" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="createAlbum" tabindex="-1" role="dialog" aria-labelledby="myCreateModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Create Album</h4>
+        <h4 class="modal-title" id="myCreateModalLabel">Create Album</h4>
       </div>
       <div class="modal-body">
           <form class="form-horizontal" action="{{ route('albums.store') }}" method="post">

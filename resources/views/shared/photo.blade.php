@@ -1,10 +1,10 @@
 <div class="col-md-3 col-sm-4 photo item">
     <div class="panel panel-default">
       <div class="panel-body">
-        <img class="img-responsive" src="{{ $photo->src }}">
+        <img class="img-responsive" alt="Fail to load image!" src="{{ $photo->src }}">
         <p class="photo-name">{{ $photo->name }}</p>
         @if($photo->intro == '')
-            <p class="photo-intro">no introduction ..</p>
+            <p class="photo-intro">no introduction</p>
         @else
             <p class="photo-intro">{{ $photo->intro }}</p>
         @endif
@@ -15,12 +15,12 @@
 </div>
 
 <!-- edit photo: dialog -->
-<div class="modal fade" id="editPhoto{{ $photo->id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="editPhoto{{ $photo->id }}" tabindex="-1" role="dialog" aria-labelledby="myEditphotoModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Edit Photo</h4>
+        <h4 class="modal-title" id="myEditphotoModalLabel">Edit Photo</h4>
       </div>
       <div class="modal-body">
           <form action="{{ route('photos.update', $photo->id) }}" method="post">
