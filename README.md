@@ -51,3 +51,12 @@ Install Laravel on Mac (Toturial: https://medium.com/@kunalnagar/install-laravel
 Laravel User Authentication (Toturial: https://auth0.com/blog/creating-your-first-laravel-app-and-adding-authentication/)
 
 Waterfalls Flow Layout (Adapted from: http://masonry.desandro.com/#initialize-with-jquery)
+
+
+### Usage
+
+Launch the app by: 
+```sh
+$ php artisan serev
+```
+Application run at http://localhost:8000/
