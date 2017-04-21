@@ -50,6 +50,12 @@ Install Laravel on Mac (Toturial: https://medium.com/@kunalnagar/install-laravel
 
 Laravel User Authentication (Toturial: https://auth0.com/blog/creating-your-first-laravel-app-and-adding-authentication/)
 
+Laravel Blade Templates (Toturial: https://laravel.com/docs/5.4/blade)
+
+Laracel Routing (Toturial: https://laravel.com/docs/5.4/routing)
+
+Laravel database (Toturial: https://laravel.com/docs/5.4/database)
+
 Waterfalls Flow Layout (Adapted from: http://masonry.desandro.com/#initialize-with-jquery)
 
 
