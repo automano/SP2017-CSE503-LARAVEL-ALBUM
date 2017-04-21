@@ -47,5 +47,7 @@ Basically, I want to create a website similar to Google Photos. Users can create
 
 ### Declaration
 Install Laravel on Mac (Toturial: https://medium.com/@kunalnagar/install-laravel-5-on-os-x-23f3578386f1) 
+
 Laravel User Authentication (Toturial: https://auth0.com/blog/creating-your-first-laravel-app-and-adding-authentication/)
+
 Waterfalls Flow Layout (Adapted from: http://masonry.desandro.com/#initialize-with-jquery)
