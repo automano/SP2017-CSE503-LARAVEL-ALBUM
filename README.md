@@ -57,6 +57,6 @@ Waterfalls Flow Layout (Adapted from: http://masonry.desandro.com/#initialize-wi
 
 Launch the app by: 
 ```sh
-$ php artisan serev
+$ php artisan serve
 ```
 Application run at http://localhost:8000/
