@@ -15,7 +15,7 @@ Basically, I want to create a website similar to Google Photos. Users can create
 - User Management (10 Points)
     - User can log in (3 points)
     - New users can register (3 points)
-    - Passwords are hashed and salted (3 points)
+    - User can get an email to reset their password when they forget it (3 points)
     - Users can log out (1 points)  
 
 - Albums Management (15 Points)
