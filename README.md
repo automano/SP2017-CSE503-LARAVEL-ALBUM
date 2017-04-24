@@ -13,10 +13,10 @@ Basically, I want to create a website similar to Google Photos. Users can create
     - Use Laravel to manipulate MYSQL (5 points) 
 
 - User Management (10 Points)
-    - A session is created when a user logs in (1 points) 
+    - User can log in (3 points)
     - New users can register (3 points)
     - Passwords are hashed and salted (3 points)
-    - Users can log out (3 points)  
+    - Users can log out (1 points)  
 
 - Albums Management (15 Points)
     - Create New album (5 points)
@@ -40,9 +40,9 @@ Basically, I want to create a website similar to Google Photos. Users can create
     - Site is visually appealing (1 point)  
 
 - Creative Portion (20 Points)
-    - User can comment photos (5 points)
+    - Add Captcha when user sign up (5 points)
     - Add cover for each album (5 points)
-    - Use masonry to do  photos layout (Waterfall flow arrangement)
+    - Use masonry to do  photos layout (Waterfall flow arrangement) (10 points)
 
 
 ### Declaration
@@ -56,8 +56,12 @@ Laracel Routing (Toturial: https://laravel.com/docs/5.4/routing)
 
 Laravel database (Toturial: https://laravel.com/docs/5.4/database)
 
+CSRF in Laravel (Toturial: https://laravel.com/docs/5.4/csrf)
+
+
 Waterfalls Flow Layout (Adapted from: http://masonry.desandro.com/#initialize-with-jquery)
 
+Photo css (Adapted from https://www.w3schools.com/css/css3_images.asp)
 
 ### Usage
 
