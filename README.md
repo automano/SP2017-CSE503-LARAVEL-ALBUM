@@ -58,10 +58,10 @@ Laravel database (Toturial: https://laravel.com/docs/5.4/database)
 
 CSRF in Laravel (Toturial: https://laravel.com/docs/5.4/csrf)
 
+Photo css (Adapted from https://www.w3schools.com/css/css3_images.asp)
 
 Waterfalls Flow Layout (Adapted from: http://masonry.desandro.com/#initialize-with-jquery)
 
-Photo css (Adapted from https://www.w3schools.com/css/css3_images.asp)
 
 ### Usage
 
