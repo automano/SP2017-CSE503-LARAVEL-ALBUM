@@ -42,7 +42,7 @@ Basically, I want to create a website similar to Google Photos. Users can create
 - Creative Portion (20 Points)
     - Add Captcha when user sign up (5 points)
     - Add cover for each album (5 points)
-    - Use masonry to do  photos layout (Waterfall flow arrangement) (10 points)
+    - Use masonry to do photos layout (Waterfall flow arrangement) (10 points)
 
 
 ### Declaration
